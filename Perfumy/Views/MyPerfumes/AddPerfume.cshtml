@@ -1,0 +1,26 @@
+﻿@model Perfume
+
+<h1>Dodaj nowy perfum</h1>
+<form asp-action="AddPerfume" method="post">
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Brand"></label>
+        <input asp-for="Brand" class="col-6" />
+        <span asp-validation-for="Brand" class="col-3 text-danger"></span>
+    </div>
+
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Model"></label>
+        <input asp-for="Model" class="col-6" />
+        <span asp-validation-for="Model" class="col-3 text-danger"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="Scent"></label>
+        <input asp-for="Scent" class="col-6" />
+        <span asp-validation-for="Scent" class="col-3 text-danger"></span>
+    </div>
+    <div class="row m-2">
+        <div class="col-3"></div>
+        <input type="submit" class="btn btn-primary m-2 col-6" value="Dodaj perfum" />
+    </div>
+
+</form>
