@@ -1,0 +1,22 @@
+﻿@model Book
+
+<h1>Dodaj nową książkę</h1>
+<form asp-action="AddBook" method="Post">
+<div class="row m-2">
+<label class="col-3 text-end" asp-for="Title"></label>
+<input class="col-6" asp-for="Title">
+<span class="col-3 text-danger" asp-validation-for="Title"></span>
+</div>
+<div class="row m-2">
+<label class="col-3 text-end" asp-for="Author"></label>
+<input class="col-6" asp-for="Author">
+<span class="col-3 text-danger" asp-validation-for="Author"></span>
+</div>
+
+<div class="row m-2">
+<label class="col-3 text-end" asp-for="Price"></label>
+<input type="number" class="col-6" asp-for="Price">
+<span class="col-3 text-danger" asp-validation-for="Price"></span>
+</div>
+
+</form>
