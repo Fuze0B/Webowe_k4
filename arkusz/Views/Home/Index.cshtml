@@ -1,0 +1,40 @@
+﻿<section id="kontener">
+
+    <header>
+        <img src="~/images/mapa_polski.jpg" alt="Mapa Polski" />
+    </header>
+
+    <section id="lewy-gora">
+        <h4>Podaj początek nazwy miasta</h4>
+        <form method="get">
+            <input type="text" name="filtr" value="@ViewBag.Filtr" />
+            <button type="submit">Szukaj</button>
+        </form>
+    </section>
+
+    <section id="lewy-dol">
+        <p>Egzamin INF.03</p>
+        <p>Autor: 0000000000</p>
+    </section>
+
+    <section id="prawy">
+        <h1>Wyniki wyszukiwania miast z uwzględnieniem filtra:</h1>
+
+        @if (!string.IsNullOrEmpty(ViewBag.Filtr))
+        {
+            <p class="filtr-tekst">@ViewBag.Filtr</p>
+
+            <table>
+                <tr><th>Miasto</th><th>Województwo</th></tr>
+                @foreach (var m in Model)
+                {
+                    <tr>
+                        <td>@m.Nazwa</td>
+                        <td>@m.Wojewodztwo</td>
+                    </tr>
+                }
+            </table>
+        }
+    </section>
+
+</section>

@@ -1,0 +1,114 @@
+/* Ogólny krój czcionki */
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl dla ciała strony */
+body {
+    background-color: LightSalmon;
+    text-align: center;
+}
+
+/* Nagłówek z obrazem tła */
+header {
+    width: 100%;
+    height: 300px; /* Wysokość obrazu */
+    background-image: url('~/images/mapa_polski.jpg'); /* Dodanie obrazu jako tła */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sekcja lewa górna */
+#lewy-gora {
+    width: 30%;
+    height: 400px;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Sekcja lewa dolna */
+#lewy-dol {
+    background-color: DarkSalmon;
+    width: 30%;
+    height: 100px;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Sekcja prawa (wyniki) */
+#prawy {
+    background-color: DarkSalmon;
+    width: 70%;
+    min-height: 500px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Styl obrazu w nagłówku */
+header img {
+    display: none; /* Ukryj oryginalny obraz, bo używamy go jako tło */
+}
+
+/* Styl dla formularza w lewej górze */
+#lewy-gora form {
+    margin-top: 20px;
+}
+
+#lewy-gora input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#lewy-gora button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Zmiana koloru czcionki dla filtra przy hover */
+.filtr-tekst {
+    font-style: italic;
+    font-size: 200%;
+    margin: 10px;
+}
+
+.filtr-tekst:hover {
+    color: GhostWhite;
+}
+
+/* Tabela z wynikami */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px dotted Maroon;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Użycie clearfix dla kontenera */
+#kontener::after {
+    content: "";
+    clear: both;
+    display: block;
+}
